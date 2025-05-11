@@ -1,0 +1,54 @@
+Regression for Table 4 last two columns (major choices):
+
+6th Column (last name initial as an explanatory variable)
+
+. reg cllghmss l_initial3r ruralxc male ib6.ped1, r
+
+Linear regression                               Number of obs     =      3,228
+                                                F(6, 3221)        =      45.12
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.0759
+                                                Root MSE          =     .46891
+
+------------------------------------------------------------------------------
+             |               Robust
+    cllghmss |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+ l_initial3r |  -.0073024   .0109013    -0.67   0.503    -.0286767    .0140719
+     ruralxc |  -.0828444   .0196647    -4.21   0.000    -.1214011   -.0442878
+        male |  -.2577453   .0165495   -15.57   0.000    -.2901939   -.2252967
+             |
+        ped1 |
+ 初中及以下  |   .0423438   .0286833     1.48   0.140    -.0138956    .0985832
+       高中  |   .0504337    .026837     1.88   0.060    -.0021857    .1030531
+       大专  |   .0299837   .0244638     1.23   0.220    -.0179825    .0779499
+             |
+       _cons |   .5474195   .0269681    20.30   0.000     .4945431    .6002959
+------------------------------------------------------------------------------
+
+7th Column (openness trait as an explanatory variable)
+
+. reg cllghmss popen ruralxc male ib6.ped1, r
+
+
+Regression for Table 4 first five columns (each of the Big 5 traits):
+
+Extraversion:
+. reg pout l_initial3r ruralxc male ib6.ped1, r
+
+Agreeableness:
+. reg pagree l_initial3r ruralxc male ib6.ped1, r
+
+Openness:
+. reg popen l_initial3r ruralxc male ib6.ped1, r 
+
+Conscientiousness:
+. reg prespond l_initial3r ruralxc male ib6.ped1, r
+
+Neuroticism:
+. reg pstable l_initial3r ruralxc male ib6.ped1, r
+
+Openness:
+. reg popen l_initial3r ruralxc male ib6.ped1, r 
+
+
